@@ -34,7 +34,7 @@ abstract class Styels {
     fontWeight: FontWeight.w400,
     height: 0,
   );
-  static const font24 = TextStyle(
+  static const fontw24 = TextStyle(
     fontSize: 24,
     color:  Colors.white,
     fontWeight: FontWeight.w400,
@@ -43,6 +43,18 @@ abstract class Styels {
   static const fontblue24 = TextStyle(
     fontSize: 24,
     color:  maincolore,
+    fontWeight: FontWeight.w400,
+    height: 0,
+  );
+  static const font36 = TextStyle(
+    fontSize: 36,
+    color: Colors.black,
+    fontWeight: FontWeight.w400,
+    height: 0,
+  );
+static  TextStyle fontw20= TextStyle(
+    fontSize: 20,
+    color:  Colors.black.withOpacity(0.6000000238418579),
     fontWeight: FontWeight.w400,
     height: 0,
   );

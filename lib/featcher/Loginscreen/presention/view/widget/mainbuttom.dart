@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:lms/core/styel.dart';
 
 class CutamMainButtom extends StatelessWidget {
-  const CutamMainButtom({super.key, required this.onPressed});
+  const CutamMainButtom({super.key, required this.onPressed, required this.nameaction});
   final void Function()? onPressed;
+  final String nameaction;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -21,9 +22,9 @@ class CutamMainButtom extends StatelessWidget {
         ),
         backgroundColor: const Color(0xFF3B82F6),
       ),
-      child: const Text(
-        "login",
-        style: Styels.font24,
+      child:  Text(
+        nameaction,
+        style: Styels.fontw24,
       ),
     );
   }
