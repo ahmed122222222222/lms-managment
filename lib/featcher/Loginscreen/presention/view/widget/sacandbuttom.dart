@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lms/core/styel.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/forgetpassword.dart';
+import 'package:lms/featcher/Loginscreen/presention/view/fristrest.dart';
 
 class Scandbuttom extends StatelessWidget {
   const Scandbuttom({super.key});
@@ -8,7 +9,7 @@ class Scandbuttom extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder:( builder)=>Forgetpassword()));
+        Navigator.push(context, MaterialPageRoute(builder:( builder)=>Massagerest()));
       },
       style: TextButton.styleFrom(
         minimumSize: const Size(390, 50),

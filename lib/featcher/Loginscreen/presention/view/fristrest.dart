@@ -1,15 +1,14 @@
-
 import 'package:flutter/material.dart';
 
-import 'package:lms/featcher/Loginscreen/presention/view/widget/bodyrestpassword.dart';
+import 'package:lms/featcher/Loginscreen/presention/view/widget/Bodymassagerest.dart';
 
 
-class Forgetpassword extends StatelessWidget {
-  const Forgetpassword({super.key});
-   @override
+class Massagerest extends StatelessWidget {
+  const Massagerest({super.key});
+  @override
   Widget build(BuildContext context) {
-   return  Scaffold(
-    appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Padding(
           padding: const EdgeInsets.all(10),
@@ -23,10 +22,7 @@ class Forgetpassword extends StatelessWidget {
         ],
         elevation: 2,
       ),
-      body: const BodyRestPass(),
-   );
+      body: const BodyMassageRest(),
+    );
   }
 }
-
-
-

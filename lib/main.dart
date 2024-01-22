@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lms/featcher/splach%20screen/presntion/view/splash.dart';
 
 void main() {

@@ -58,6 +58,23 @@ static  TextStyle fontw20= TextStyle(
     fontWeight: FontWeight.w400,
     height: 0,
   );
-  
+  static  TextStyle font11= TextStyle(
+    fontSize: 11,
+    color:  Colors.black.withOpacity(0.6000000238418579),
+    fontWeight: FontWeight.w600,
+    height: 0,
+  );
+  static  TextStyle font12= const TextStyle(
+    fontSize: 12,
+    color:  Color(0xff3B82F6),
+    fontWeight: FontWeight.w600,
+    height: 0,
+  );
+  static  TextStyle font10= const TextStyle(
+    fontSize: 10,
+    color:  Color(0xFF858597),
+    fontWeight: FontWeight.w600,
+    height: 0,
+  );
   
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lms/core/styel.dart';
+import 'package:lms/featcher/HomeScreen/presention/view/Home.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/widget/customtextfiled.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/widget/mainbuttom.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/widget/sacandbuttom.dart';
@@ -56,6 +57,7 @@ class _LOgInBodyState extends State<LOgInBody> {
                 onPressed: () {
                   if (globalKey.currentState!.validate()) {
                     setState(() {});
+                    Navigator.push(context, MaterialPageRoute(builder: (builder)=>HomeScreen()));
                   }
                 }, nameaction: 'Login',
               ),
