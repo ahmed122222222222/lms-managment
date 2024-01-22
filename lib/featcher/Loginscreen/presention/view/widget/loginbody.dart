@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lms/core/styel.dart';
+import 'package:lms/core/utils/image.dart';
 import 'package:lms/featcher/HomeScreen/presention/view/Home.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/widget/customtextfiled.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/widget/mainbuttom.dart';
@@ -24,29 +25,19 @@ class _LOgInBodyState extends State<LOgInBody> {
           padding: EdgeInsets.only(
               left: 22,
               right: 22,
-              top: MediaQuery.of(context).size.height * .12),
+              top: MediaQuery.of(context).size.height * .01),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Text('log in', style: Styels.font40),
+              SizedBox(height: 130, child: Image.asset(Images.Loginimage)),
+              Image.asset(Images.Logintext),
               SizedBox(
-                width: 300,
-                child: Row(
-                  children: [
-                    const Text('Log in with your university ',
-                        style: Styels.font16),
-                    Image.asset("Asset/image/imog.png"),
-                  ],
-                ),
-              ),
-              const Text('email', style: Styels.font16),
-              const SizedBox(
-                height: 61,
+                height: 35,
               ),
               const Text('email', style: Styels.font20),
               const CustomTextFormFiled(),
               const SizedBox(
-                height: 30,
+                height: 35,
               ),
               const Text('password', style: Styels.font20),
               const CustomTextFormFiled(),
@@ -57,14 +48,18 @@ class _LOgInBodyState extends State<LOgInBody> {
                 onPressed: () {
                   if (globalKey.currentState!.validate()) {
                     setState(() {});
-                    Navigator.push(context, MaterialPageRoute(builder: (builder)=>HomeScreen()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (builder) => HomeScreen()));
                   }
-                }, nameaction: 'Login',
+                },
+                nameaction: 'Login',
               ),
               const SizedBox(
                 height: 41,
               ),
-              const Scandbuttom()
+              const Scandbuttom(
+                titel: 'rest password',
+              )
             ],
           ),
         ),

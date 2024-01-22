@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lms/core/styel.dart';
 
 class CutamMainButtom extends StatelessWidget {
@@ -24,7 +25,7 @@ class CutamMainButtom extends StatelessWidget {
       ),
       child:  Text(
         nameaction,
-        style: Styels.fontw24,
+        style: GoogleFonts.poppins(fontSize: 24,fontWeight:FontWeight.w500 ,color:Colors.white ),
       ),
     );
   }

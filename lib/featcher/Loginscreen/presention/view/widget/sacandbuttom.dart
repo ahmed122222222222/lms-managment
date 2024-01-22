@@ -4,7 +4,8 @@ import 'package:lms/featcher/Loginscreen/presention/view/forgetpassword.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/fristrest.dart';
 
 class Scandbuttom extends StatelessWidget {
-  const Scandbuttom({super.key});
+  const Scandbuttom({super.key, required this.titel});
+ final String titel;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -20,8 +21,8 @@ class Scandbuttom extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
       ),
-      child: const Text(
-        "rest password",
+      child:  Text(
+        titel,
         style: Styels.fontblue24,
       ),
     );

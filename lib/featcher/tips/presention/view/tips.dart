@@ -6,8 +6,9 @@ class Tips1 extends StatelessWidget {
   const Tips1({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: BodyTips1(),
+    return  Scaffold(
+      appBar: AppBar(automaticallyImplyLeading: true ,),
+      body: const BodyTips1(),
     );
   }
 }

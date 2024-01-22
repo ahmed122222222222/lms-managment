@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lms/core/styel.dart';
+
 
 class CustomPasswordTextFormFiled extends StatelessWidget {
   const CustomPasswordTextFormFiled({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: const EdgeInsets.all(3),
       child: TextFormField(
@@ -18,7 +19,11 @@ class CustomPasswordTextFormFiled extends StatelessWidget {
           return null;
         },
         decoration: InputDecoration(
-          suffixIcon: const Icon(Icons.remove_red_eye),
+            suffixIcon: SizedBox(
+                child: SvgPicture.asset(
+              "Asset/image/View Eye Off.svg",
+              color: Colors.amber,
+            )),
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
             label: const Text(
               "enter your password",

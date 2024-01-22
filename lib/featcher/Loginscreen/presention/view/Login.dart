@@ -7,18 +7,8 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Image.asset("Asset/image/FCAl.png"),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(top: 10, left: 10, right: 20),
-            child: Image.asset("Asset/image/icons.png"),
-          )
-        ],
-        elevation: 2,
+        automaticallyImplyLeading: true,
+        elevation: 0,
       ),
       body: const LOgInBody(),
     );

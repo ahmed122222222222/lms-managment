@@ -1,5 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:lms/core/utils/image.dart';
 import 'package:lms/featcher/tips/presention/view/tips.dart';
 
 class BodySplashScreen extends StatefulWidget {
@@ -29,13 +30,13 @@ class _bodySplashScreenState extends State<BodySplashScreen>   with SingleTicker
         SizedBox(
           height: 141,
           width: 107,
-          child: Image.asset("Asset/image/Group 12558.png")),
+          child: Image.asset(Images.splashicon)),
         AnimatedBuilder(
           animation: sildinganmation,
           builder: (BuildContext context, Widget? child) {
             return SlideTransition(
               position: sildinganmation,
-              child: Image.asset("Asset/image/FCAl.png")
+              child: Image.asset(Images.splashtext)
             );
           },
         )

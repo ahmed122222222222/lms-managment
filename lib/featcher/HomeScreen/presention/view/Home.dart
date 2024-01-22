@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'package:lms/featcher/HomeScreen/presention/view/widget/BodyHomeScreen.dart';
+import 'package:lms/core/styel.dart';
+import 'package:lms/core/utils/image.dart';
+import 'package:lms/featcher/HomeScreen/presention/view/widget/custombuttom.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -18,12 +19,23 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         automaticallyImplyLeading: false,
         title: Padding(
           padding: const EdgeInsets.all(10),
-          child: Image.asset("Asset/image/FCAl.png"),
+          child: Row(
+            children: [
+              const Icon(Icons.menu),
+              const SizedBox(
+                width: 11,
+              ),
+              Image.asset(Images.logo),
+            ],
+          ),
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(top: 10, left: 10, right: 20),
-            child: Image.asset("Asset/image/icons.png"),
+          Image.asset("Asset/image/basil_notification-on-solid.png"),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: SacandButtomHome(
+              titel: 'logout',
+            ),
           ),
         ],
         elevation: 2,
@@ -62,20 +74,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             label: 'Courses',
           ),
           BottomNavigationBarItem(
-            icon: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  SizedBox.shrink(),
-                  SizedBox(
-                    height: 10,
-                  )
-                ],
-              ),
-            ), // Adjust padding around empty space
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
             icon: Column(
               children: [
                 Icon(Icons.notifications),
@@ -97,20 +95,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
         ],
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: FloatingActionButton(
-          elevation: 0,
-          onPressed: () {},
-          backgroundColor: const Color(0xFF3D5CFF).withOpacity(.1),
-          foregroundColor: const Color(0xFF3D5CFF),
-          mini: true,
-          shape: const CircleBorder(),
-          child: const Icon(Icons.search),
-        ),
-      ),
-      body: const HomeScreenbody(),
     );
   }
 

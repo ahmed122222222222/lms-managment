@@ -1,6 +1,8 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lms/core/styel.dart';
+import 'package:lms/core/utils/image.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/widget/creatpasswordfiled.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/widget/mainbuttom.dart';
 
@@ -19,40 +21,44 @@ class _CreatPasswordBodyState extends State<CreatPasswordBody> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-          left: 22, right: 22, top: MediaQuery.of(context).size.height * .12),
+          left: 22, right: 22, top: MediaQuery.of(context).size.height * .02),
       child: Form(
         key: globalKey,
         child: ListView(
           children: [
-            const Text(
-              "creat password",
-              style: Styels.font36,
+            Image.asset(Images.restpassimage),
+            const SizedBox(
+              height: 25,
             ),
-            Text(
-              "should contain at least one",
-              style: Styels.fontw20,
+            Center(
+              child: Text(
+                "Reset your password",
+                style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w800, fontSize: 24),
+              ),
             ),
-            Text(
-              "charcter",
-              style: Styels.fontw20,
+            const SizedBox(
+              height: 10,
+            ),
+            const Center(
+              child: Text(
+                "From your classroom, enter the new",
+                style: Styels.font14,
+              ),
+            ),
+            const Center(
+              child: Text(
+                "password",
+                style: Styels.font14,
+              ),
             ),
             const SizedBox(
               height: 30,
             ),
-            const Text(
-              "write pass",
-              style: Styels.font20,
-            ),
-            const SizedBox(
-              height: 4,
-            ),
-            const CustomPasswordTextFormFiled(),
-            const SizedBox(
-              height: 30,
-            ),
-            const Text(
-              "comfirm pass",
-              style: Styels.font20,
+            Text(
+              "new pass",
+              style: GoogleFonts.poppins(
+                  fontSize: 20, fontWeight: FontWeight.w500),
             ),
             const SizedBox(
               height: 4,

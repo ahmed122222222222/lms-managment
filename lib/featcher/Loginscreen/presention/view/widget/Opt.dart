@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:lms/const.dart';
 
 class OptVildation extends StatelessWidget {
   const OptVildation({super.key});
   @override
   Widget build(BuildContext context) {
     return OtpTextField(
-      fillColor: const Color(0x603B82F6),
+      fillColor: const Color(0x0fe2e8f0),
+      textStyle:const TextStyle(color: maincolore) ,
       filled: true,
       fieldWidth: 58,
       margin: const EdgeInsets.only(right: 20.0),
