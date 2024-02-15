@@ -6,11 +6,15 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        elevation: 0,
-      ),
-      body: const LOgInBody(),
+    
+      body: Container(
+         decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.center,
+            colors: [Colors.blue, Colors.white],
+          ),),
+        child: const LOgInBody()),
     );
   }
 }

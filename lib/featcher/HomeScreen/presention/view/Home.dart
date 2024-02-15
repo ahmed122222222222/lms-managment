@@ -1,44 +1,89 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:lms/core/styel.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import 'package:lms/core/utils/image.dart';
-import 'package:lms/featcher/HomeScreen/presention/view/widget/custombuttom.dart';
+import 'package:lms/featcher/Coureses/persention/view/courses.dart';
+import 'package:lms/featcher/HomeScreen/presention/view/widget/homebody.dart';
+
+import 'package:lms/featcher/accout/presenton/view/account.dart';
+import 'package:lms/featcher/cleander/presention/view/cleander.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Row(
-            children: [
-              const Icon(Icons.menu),
-              const SizedBox(
-                width: 11,
-              ),
-              Image.asset(Images.logo),
-            ],
-          ),
+      drawer: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.center,
+            colors: [Colors.blue, Colors.white],)
         ),
-        actions: [
-          Image.asset("Asset/image/basil_notification-on-solid.png"),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: SacandButtomHome(
-              titel: 'logout',
+      
+        child: Drawer(
+          backgroundColor: Color.fromARGB(2, 1, 0, 5),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical:100),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Image.asset("Asset/image/accoun.png"),
+                  const SizedBox(height: 15,),
+                    
+                   Text("Hi Ahmed !",style: GoogleFonts.poppins(fontSize: 20,fontWeight: FontWeight.bold),),
+                  Divider(color: Colors.black.withOpacity(.9),),
+                  SizedBox(height: 30,),
+                  Row(
+                    children: [
+                    Icon(Icons.account_box),
+                    SizedBox(width: 10,),
+                    Text("Account",style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w700),)
+                    
+                    ],
+                  ),
+                  SizedBox(height: 30,),
+                  Row(
+                    children: [
+                    Icon(Icons.account_box),
+                    SizedBox(width: 10,),
+                    Text("Account",style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w700),)
+                    
+                    ],
+                  ),
+                  SizedBox(height: 30,),
+                  Row(
+                    children: [
+                    Icon(Icons.account_box),
+                    SizedBox(width: 10,),
+                    Text("Account",style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w700),)
+                    
+                    ],
+                  ),
+                  SizedBox(height:30,),
+                  Row(
+                    children: [
+                    Icon(Icons.account_box),
+                    SizedBox(width: 10,),
+                    Text("Account",style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w700),)
+                    
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
-        ],
-        elevation: 2,
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 3,
@@ -46,9 +91,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         selectedLabelStyle: const TextStyle(fontSize: 11),
         unselectedLabelStyle: const TextStyle(fontSize: 11),
         currentIndex: _currentIndex,
-        onTap: (index) {
-          _onTabSelected(index);
-        },
+        onTap: _onTabSelected,
         selectedItemColor: const Color(0xFF3D5CFF),
         items: const [
           BottomNavigationBarItem(
@@ -57,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 Icon(Icons.home),
                 SizedBox(
                   height: 10,
-                )
+                ),
               ],
             ),
             label: 'Home',
@@ -68,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 Icon(FontAwesomeIcons.book),
                 SizedBox(
                   height: 10,
-                )
+                ),
               ],
             ),
             label: 'Courses',
@@ -76,10 +119,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           BottomNavigationBarItem(
             icon: Column(
               children: [
-                Icon(Icons.notifications),
+                Icon(Icons.calendar_month),
                 SizedBox(
                   height: 10,
-                )
+                ),
               ],
             ),
             label: 'Notifications',
@@ -94,6 +137,25 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             label: 'Profile',
           ),
         ],
+      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.center,
+            colors: [Colors.blue, Colors.white],
+          ),
+        ),
+        child: IndexedStack(
+          index: _currentIndex,
+          children: [
+            const HomeScreenBody(), // Add your home screen body widget
+            const Courese(), // Add your courses page widget
+            // Add your profile page widget
+            Cleander(),
+            Acount(),
+          ],
+        ),
       ),
     );
   }

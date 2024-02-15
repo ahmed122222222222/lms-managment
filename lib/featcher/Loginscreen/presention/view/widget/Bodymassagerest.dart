@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lms/core/styel.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/forgetpassword.dart';
+import 'package:lms/featcher/Loginscreen/presention/view/widget/customtextfiled.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/widget/mainbuttom.dart';
 
 class BodyMassageRest extends StatelessWidget {
@@ -13,28 +15,27 @@ class BodyMassageRest extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset("Asset/image/massage.png"),
+          Image.asset("Asset/image/Sending e-mail.png"),
           const SizedBox(
             height: 16,
           ),
           Text(
-            "rest password",
-            style: Styels.fontw24.copyWith(color: Colors.black),
+            "Reset Password",
+            style:GoogleFonts.poppins(fontSize: 24,fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
-            "We will send a message to",
-            style: Styels.fontw20,
+            "Enter your email to reset your password",
+            style: GoogleFonts.poppins(fontSize:15 ,fontWeight: FontWeight.w500,color: Colors.black.withOpacity(.6)),
           ),
-          Text(
-            "you on the phone number",
-            style: Styels.fontw20,
-          ),
+         
           const SizedBox(
-            height: 95,
+            height: 50,
           ),
+          CustomTextFormFiled(),
+          SizedBox(height: 30,),
           CutamMainButtom(
               onPressed: () {
                 Navigator.push(

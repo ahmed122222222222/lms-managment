@@ -47,19 +47,12 @@ class _CreatPasswordBodyState extends State<CreatPasswordBody> {
               ),
             ),
             const Center(
-              child: Text(
-                "password",
-                style: Styels.font14,
-              ),
+              
             ),
             const SizedBox(
               height: 30,
             ),
-            Text(
-              "new pass",
-              style: GoogleFonts.poppins(
-                  fontSize: 20, fontWeight: FontWeight.w500),
-            ),
+          
             const SizedBox(
               height: 4,
             ),

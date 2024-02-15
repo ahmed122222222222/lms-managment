@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lms/core/styel.dart';
+
 
 class CutamMainButtom extends StatelessWidget {
   const CutamMainButtom({super.key, required this.onPressed, required this.nameaction});
@@ -17,9 +17,9 @@ class CutamMainButtom extends StatelessWidget {
           right: 120,
           bottom: 5,
         ),
-        minimumSize: const Size(390, 50),
+        minimumSize: const Size(390, 65),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(25),
         ),
         backgroundColor: const Color(0xFF3B82F6),
       ),

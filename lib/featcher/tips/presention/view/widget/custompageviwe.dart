@@ -15,14 +15,14 @@ class CustomPageView extends StatelessWidget {
       controller: pageController,
       children: const [
         ItemPageView(
-          img: 'Asset/image/illustration.png',
-          title: 'All lectures and videos',
+          img: 'Asset/image/landscape.png',
+          title: 'Access Materials easy ',
           subtitle: 'All lectures, pdf and exams',
         ),
         ItemPageView(
-          img: 'Asset/image/Group 12559.png',
-          title: 'All lectures and videos',
-          subtitle: 'All lectures, pdf and exams',
+          img: 'Asset/image/landscape2.png',
+          title: 'Access Materials offline',
+          subtitle: 'Last lectures, labs and assignments',
         ),
       ],
     );

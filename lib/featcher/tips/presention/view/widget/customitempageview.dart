@@ -18,13 +18,13 @@ class ItemPageView extends StatelessWidget {
         ),
         Image.asset(img),
         const SizedBox(
-          height: 55,
+          height: 30,
         ),
-        Text(title, textAlign: TextAlign.center, style: Styels.font22),
+        Text(title, textAlign: TextAlign.center, style: Styels.font22.copyWith(fontSize: 30)),
         const SizedBox(
-          height: 34,
+          height: 10,
         ),
-        Text(subtitle, textAlign: TextAlign.center, style: Styels.font16),
+        Text(subtitle, textAlign: TextAlign.center, style: Styels.font16.copyWith(fontSize: 20)),
         const SizedBox(
           height: 38,
         ),
