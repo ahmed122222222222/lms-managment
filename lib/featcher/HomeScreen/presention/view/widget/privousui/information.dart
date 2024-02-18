@@ -8,13 +8,12 @@ class Information extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 0.17,
-      decoration: BoxDecoration(
-        color: const Color(0xfff3d5cff),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child:const BodyContiner()
-    );
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height * 0.17,
+        decoration: BoxDecoration(
+          color: const Color(0xfff3d5cff),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: const BodyContiner());
   }
 }

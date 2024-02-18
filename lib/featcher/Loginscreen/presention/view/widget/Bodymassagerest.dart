@@ -21,21 +21,26 @@ class BodyMassageRest extends StatelessWidget {
           ),
           Text(
             "Reset Password",
-            style:GoogleFonts.poppins(fontSize: 24,fontWeight: FontWeight.bold),
+            style:
+                GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
             "Enter your email to reset your password",
-            style: GoogleFonts.poppins(fontSize:15 ,fontWeight: FontWeight.w500,color: Colors.black.withOpacity(.6)),
+            style: GoogleFonts.poppins(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+                color: Colors.black.withOpacity(.6)),
           ),
-         
           const SizedBox(
             height: 50,
           ),
           CustomTextFormFiled(),
-          SizedBox(height: 30,),
+          SizedBox(
+            height: 30,
+          ),
           CutamMainButtom(
               onPressed: () {
                 Navigator.push(

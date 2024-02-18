@@ -6,10 +6,12 @@ class CustomPasswordTextFormFiled extends StatefulWidget {
   const CustomPasswordTextFormFiled({Key? key}) : super(key: key);
 
   @override
-  _CustomPasswordTextFormFiledState createState() => _CustomPasswordTextFormFiledState();
+  _CustomPasswordTextFormFiledState createState() =>
+      _CustomPasswordTextFormFiledState();
 }
 
-class _CustomPasswordTextFormFiledState extends State<CustomPasswordTextFormFiled> {
+class _CustomPasswordTextFormFiledState
+    extends State<CustomPasswordTextFormFiled> {
   bool _obscureText = true;
 
   @override
@@ -27,7 +29,9 @@ class _CustomPasswordTextFormFiledState extends State<CustomPasswordTextFormFile
         decoration: InputDecoration(
           prefixIcon: Icon(Icons.lock),
           suffixIcon: IconButton(
-            icon: _obscureText ? Icon(Icons.visibility_off) : Icon(Icons.visibility),
+            icon: _obscureText
+                ? Icon(Icons.visibility_off)
+                : Icon(Icons.visibility),
             onPressed: () {
               setState(() {
                 _obscureText = !_obscureText;
@@ -44,4 +48,3 @@ class _CustomPasswordTextFormFiledState extends State<CustomPasswordTextFormFile
     );
   }
 }
-

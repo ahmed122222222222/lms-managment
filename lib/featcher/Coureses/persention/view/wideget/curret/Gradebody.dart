@@ -5,9 +5,6 @@ import 'package:lms/featcher/Coureses/persention/view/wideget/curret/tabel.dart'
 
 import '../Listtielgrade.dart';
 
-
-
-
 class Boddygrad extends StatelessWidget {
   const Boddygrad({super.key});
 
@@ -20,9 +17,12 @@ class Boddygrad extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Back(),
-                       SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
               child: Text(
                 "Grades",
                 style: GoogleFonts.poppins(
@@ -45,8 +45,8 @@ class Boddygrad extends StatelessWidget {
                   RichText(
                     text: TextSpan(
                       text: 'GBA : ',
-                      style:
-                          GoogleFonts.poppins(fontSize: 20, color: Colors.black),
+                      style: GoogleFonts.poppins(
+                          fontSize: 20, color: Colors.black),
                       children: [
                         TextSpan(
                           text: '3.21',
@@ -59,8 +59,8 @@ class Boddygrad extends StatelessWidget {
                   RichText(
                     text: TextSpan(
                       text: 'Grade :  ',
-                      style:
-                          GoogleFonts.poppins(fontSize: 20, color: Colors.black),
+                      style: GoogleFonts.poppins(
+                          fontSize: 20, color: Colors.black),
                       children: [
                         TextSpan(
                           text: 'B+',
@@ -73,13 +73,9 @@ class Boddygrad extends StatelessWidget {
                 ],
               ),
             ),
-           
           ],
         ),
       ),
     );
   }
-
 }
-
-

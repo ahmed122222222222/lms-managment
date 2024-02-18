@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 import 'package:lms/featcher/Coureses/persention/view/wideget/curret/EroliListview.dart';
 
 import 'package:lms/featcher/HomeScreen/presention/view/widget/Customappbar.dart';
@@ -65,5 +64,3 @@ class Enroil extends StatelessWidget {
     );
   }
 }
-
-

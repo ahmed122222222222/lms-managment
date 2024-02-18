@@ -24,18 +24,18 @@ class BodyContinerQuiz extends StatelessWidget {
               "Asset/image/quize.png",
               height: 25,
             ),
-           
             Text(
               "9.5",
               style: GoogleFonts.poppins(
-                  fontSize: 10, fontWeight: FontWeight.w500, color: Colors.green),
+                  fontSize: 10,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.green),
             ),
             Text(
               "9.5",
               style: GoogleFonts.poppins(
                   fontSize: 10, fontWeight: FontWeight.w500, color: Colors.red),
             ),
-            
           ],
         ),
       ),

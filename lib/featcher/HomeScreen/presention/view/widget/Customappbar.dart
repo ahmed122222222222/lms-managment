@@ -11,12 +11,15 @@ class CustomAppbar extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {
-           Scaffold.of(context).openDrawer();
+            Scaffold.of(context).openDrawer();
           },
           icon: Image.asset("Asset/image/icon.png"),
         ),
         IconButton(
-          onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (builder)=>Notifcation()));},
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (builder) => Notifcation()));
+          },
           icon: Image.asset("Asset/image/notification.png"),
         )
       ],

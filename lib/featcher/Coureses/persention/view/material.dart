@@ -9,25 +9,20 @@ import 'package:lms/featcher/Coureses/persention/view/lec.dart';
 import 'package:lms/featcher/Coureses/persention/view/quize.dart';
 import 'package:lms/featcher/Coureses/persention/view/wideget/curret/odyactionchoose.dart';
 
-
 // ignore: must_be_immutable, camel_case_types
 class ChooseAaction extends StatelessWidget {
-
-
   const ChooseAaction({super.key});
-    @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
-              title: Text("Parallel Programming",style: GoogleFonts.poppins(fontSize: 14,fontWeight: FontWeight.w700),)
-        ,centerTitle: true,
-       
-       
-      ),
-      body: const BodyChoseAction()
-    );
+        appBar: AppBar(
+          title: Text(
+            "Parallel Programming",
+            style:
+                GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w700),
+          ),
+          centerTitle: true,
+        ),
+        body: const BodyChoseAction());
   }
 }
-
-
-

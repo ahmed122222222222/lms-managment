@@ -3,18 +3,16 @@ import 'package:flutter/material.dart';
 
 import 'package:lms/featcher/Coureses/persention/view/wideget/curret/Gridviewlec.dart';
 
-class LecTap extends StatelessWidget {   
-
+class LecTap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-   return DefaultTabController(
+    return DefaultTabController(
       length: 2,
       child: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal:00),
+            padding: const EdgeInsets.symmetric(horizontal: 00),
             child: ButtonsTabBar(
-          
               height: 50,
               radius: 16,
               buttonMargin: const EdgeInsets.symmetric(horizontal: 10),
@@ -24,35 +22,34 @@ class LecTap extends StatelessWidget {
               unselectedLabelStyle: const TextStyle(color: Colors.white),
               labelStyle: const TextStyle(
                   color: Colors.white, fontWeight: FontWeight.bold),
-
               tabs: const [
                 Tab(
-                  text:"lect" ,
+                  text: "lect",
                 ),
                 Tab(
                   text: "lab",
                 ),
-                
               ],
             ),
           ),
-           Expanded(
+          Expanded(
             child: TabBarView(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal:30.0,vertical: 10),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 30.0, vertical: 10),
                   child: LecListView(),
                 ),
-               Padding(
-                 padding: const EdgeInsets.symmetric(horizontal:30.0,vertical: 10),
-                 child: LecListView(),
-               )
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 30.0, vertical: 10),
+                  child: LecListView(),
+                )
               ],
             ),
           ),
         ],
       ),
     );
-
   }
 }

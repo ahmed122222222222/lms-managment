@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class CutamMainButtom extends StatelessWidget {
-  const CutamMainButtom({super.key, required this.onPressed, required this.nameaction});
+  const CutamMainButtom(
+      {super.key, required this.onPressed, required this.nameaction});
   final void Function()? onPressed;
   final String nameaction;
   @override
@@ -23,9 +23,10 @@ class CutamMainButtom extends StatelessWidget {
         ),
         backgroundColor: const Color(0xFF3B82F6),
       ),
-      child:  Text(
+      child: Text(
         nameaction,
-        style: GoogleFonts.poppins(fontSize: 24,fontWeight:FontWeight.w500 ,color:Colors.white ),
+        style: GoogleFonts.poppins(
+            fontSize: 24, fontWeight: FontWeight.w500, color: Colors.white),
       ),
     );
   }

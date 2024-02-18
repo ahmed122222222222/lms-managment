@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lms/core/utils/image.dart';
 import 'package:lms/featcher/HomeScreen/presention/view/Home.dart';
+import 'package:lms/featcher/Loginscreen/data/model/Loginmodel.dart';
 import 'package:lms/featcher/Loginscreen/presention/manager/cubit/login_cubit.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/fristrest.dart';
 import 'package:lms/featcher/Loginscreen/presention/view/widget/creatpasswordfiled.dart';
@@ -25,16 +26,20 @@ class _LOgInBodyState extends State<LOgInBody> {
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
         // Listen to state changes and navigate accordingly
-        if (state is LoginSucess) {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => HomeScreen()),
-          );
-        } else if (state is LoginFailuer) {
-          // Handle login failure, maybe show an error message
+        if (state is LoginFailuer) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Login failed!'),backgroundColor: Colors.blue,),
+            SnackBar(
+              content: Center(child: Text(state.errmas,style: GoogleFonts.poppins(fontSize: 13,fontWeight: FontWeight.bold,color: Colors.white),)),
+              backgroundColor: Colors.blue,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16)
+              ),
+            ),
           );
+        }
+        else if (state is LoginSucess)
+        {
+          Navigator.push(context, MaterialPageRoute(builder: (builder)=>HomeScreen()));
         }
       },
       builder: (context, state) {
@@ -98,11 +103,12 @@ class _LOgInBodyState extends State<LOgInBody> {
                   ),
                   CutamMainButtom(
                     onPressed: () {
+                      var Loginmo = Loginmodel(
+                          email: "AbdulMajeedSallam@gmail.com", password: "P@ssw0rd");
                       if (globalKey.currentState!.validate()) {
-                        BlocProvider.of<LoginCubit>(context).Login(
+                        BlocProvider.of<LoginCubit>(context).login(
+                          Loginmo,
                           "Account/login",
-                          "AbdulMajeedSallam@gmail.com",
-                          
                         );
                       }
                     },

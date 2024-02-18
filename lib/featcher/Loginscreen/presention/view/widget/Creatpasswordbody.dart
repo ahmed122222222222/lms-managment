@@ -46,13 +46,10 @@ class _CreatPasswordBodyState extends State<CreatPasswordBody> {
                 style: Styels.font14,
               ),
             ),
-            const Center(
-              
-            ),
+            const Center(),
             const SizedBox(
               height: 30,
             ),
-          
             const SizedBox(
               height: 4,
             ),

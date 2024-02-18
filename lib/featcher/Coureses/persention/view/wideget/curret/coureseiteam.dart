@@ -10,19 +10,17 @@ class CoureseIteam extends StatefulWidget {
 }
 
 class _CoureseIteamState extends State<CoureseIteam> {
-   @override
+  @override
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * .11,
-        decoration: BoxDecoration(
-            borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(25), topRight: Radius.circular(25)),
-            border: Border.all(color: (const Color(0xff009688)))), child: const Padding(
-        padding: EdgeInsets.symmetric(vertical:15.0),
-        child: ListTitelSubject()
-      ),
-      
+      decoration: BoxDecoration(
+          borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(25), topRight: Radius.circular(25)),
+          border: Border.all(color: (const Color(0xff009688)))),
+      child: const Padding(
+          padding: EdgeInsets.symmetric(vertical: 15.0),
+          child: ListTitelSubject()),
     );
   }
 }
-

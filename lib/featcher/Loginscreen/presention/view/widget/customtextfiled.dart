@@ -28,7 +28,9 @@ class _CustomTextFormFiledState extends State<CustomTextFormFiled> {
             borderRadius: BorderRadius.circular(20),
           ),
           labelText: "Email",
-          labelStyle: _isFocused ? Styels.font16.copyWith(color: Colors.blue) : Styels.font16,
+          labelStyle: _isFocused
+              ? Styels.font16.copyWith(color: Colors.blue)
+              : Styels.font16,
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
             borderSide: const BorderSide(
@@ -52,9 +54,7 @@ class _CustomTextFormFiledState extends State<CustomTextFormFiled> {
             _isFocused = false;
           });
         },
-       
       ),
     );
   }
 }
-

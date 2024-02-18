@@ -5,43 +5,43 @@ import 'package:lms/featcher/tips/presention/view/tips.dart';
 
 class BodySplashScreen extends StatefulWidget {
   const BodySplashScreen({super.key});
- 
+
   @override
   State<BodySplashScreen> createState() => _bodySplashScreenState();
 }
 
 // ignore: camel_case_types
-class _bodySplashScreenState extends State<BodySplashScreen>   with SingleTickerProviderStateMixin  {
+class _bodySplashScreenState extends State<BodySplashScreen>
+    with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> sildinganmation;
   @override
   void initState() {
-    
     super.initState();
-      slidinganmation();
-      navhome();
+    slidinganmation();
+    navhome();
   }
+
   @override
   Widget build(BuildContext context) {
-    return Column( mainAxisAlignment: MainAxisAlignment.center,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        
         SizedBox(
-          height: 141,
-          width: 107,
-          child: Image.asset(Images.splashicon)),
+            height: 141, width: 107, child: Image.asset(Images.splashicon)),
         AnimatedBuilder(
           animation: sildinganmation,
           builder: (BuildContext context, Widget? child) {
             return SlideTransition(
-              position: sildinganmation,
-              child: Image.asset(Images.splashtext)
-            );
+                position: sildinganmation,
+                child: Image.asset(Images.splashtext));
           },
         )
-      ],); 
+      ],
+    );
   }
+
   //function
 //silding anmtion
   void slidinganmation() {
@@ -56,8 +56,8 @@ class _bodySplashScreenState extends State<BodySplashScreen>   with SingleTicker
 //nav
   Future<void> navhome() {
     return Future.delayed(const Duration(seconds: 2), () {
-   
-     Navigator.push(context, MaterialPageRoute(builder: (builder)=> const Tips1()));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (builder) => const Tips1()));
     });
   }
 }

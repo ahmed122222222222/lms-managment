@@ -14,7 +14,7 @@ class TabelGraid extends StatelessWidget {
             TableCell(
               child: Container(
                 padding: const EdgeInsets.all(8.0),
-                width:  MediaQuery.of(context).size.width*.7,
+                width: MediaQuery.of(context).size.width * .7,
                 height: 60, // تحديد عرض العمود الأول
                 child: Text(
                   '#',
@@ -43,7 +43,8 @@ class TabelGraid extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 height: 50,
-                width:  MediaQuery.of(context).size.width*.7,// تحديد عرض العمود الأول
+                width: MediaQuery.of(context).size.width *
+                    .7, // تحديد عرض العمود الأول
                 child: Text(
                   'Quize 1',
                   style: GoogleFonts.poppins(
@@ -73,7 +74,8 @@ class TabelGraid extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 height: 50,
-                width: MediaQuery.of(context).size.width*.7, // تحديد عرض العمود الأول
+                width: MediaQuery.of(context).size.width *
+                    .7, // تحديد عرض العمود الأول
                 child: Text(
                   'Quize 1',
                   style: GoogleFonts.poppins(
@@ -103,7 +105,8 @@ class TabelGraid extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 height: 50,
-                width:  MediaQuery.of(context).size.width*.7, // تحديد عرض العمود الأول
+                width: MediaQuery.of(context).size.width *
+                    .7, // تحديد عرض العمود الأول
                 child: Text(
                   'Quize 1',
                   style: GoogleFonts.poppins(
@@ -132,7 +135,7 @@ class TabelGraid extends StatelessWidget {
             TableCell(
               child: Container(
                 padding: const EdgeInsets.all(8.0),
-                width: MediaQuery.of(context).size.width*.7,
+                width: MediaQuery.of(context).size.width * .7,
                 height: 50, // تحديد عرض العمود الأول
                 child: Text(
                   'Quize 1',

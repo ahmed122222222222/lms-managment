@@ -24,59 +24,93 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       drawer: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.center,
-            colors: [Colors.blue, Colors.white],)
-        ),
-      
+            gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.center,
+          colors: [Colors.blue, Colors.white],
+        )),
         child: Drawer(
           backgroundColor: Color.fromARGB(2, 1, 0, 5),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical:100),
+            padding: const EdgeInsets.symmetric(vertical: 100),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
                   Image.asset("Asset/image/accoun.png"),
-                  const SizedBox(height: 15,),
-                    
-                   Text("Hi Ahmed !",style: GoogleFonts.poppins(fontSize: 20,fontWeight: FontWeight.bold),),
-                  Divider(color: Colors.black.withOpacity(.9),),
-                  SizedBox(height: 30,),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "Hi Ahmed !",
+                    style: GoogleFonts.poppins(
+                        fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  Divider(
+                    color: Colors.black.withOpacity(.9),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Row(
                     children: [
-                    Icon(Icons.account_box),
-                    SizedBox(width: 10,),
-                    Text("Account",style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w700),)
-                    
+                      Icon(Icons.account_box),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Account",
+                        style: GoogleFonts.poppins(
+                            fontSize: 18, fontWeight: FontWeight.w700),
+                      )
                     ],
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Row(
                     children: [
-                    Icon(Icons.account_box),
-                    SizedBox(width: 10,),
-                    Text("Account",style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w700),)
-                    
+                      Icon(Icons.account_box),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Account",
+                        style: GoogleFonts.poppins(
+                            fontSize: 18, fontWeight: FontWeight.w700),
+                      )
                     ],
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Row(
                     children: [
-                    Icon(Icons.account_box),
-                    SizedBox(width: 10,),
-                    Text("Account",style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w700),)
-                    
+                      Icon(Icons.account_box),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Account",
+                        style: GoogleFonts.poppins(
+                            fontSize: 18, fontWeight: FontWeight.w700),
+                      )
                     ],
                   ),
-                  SizedBox(height:30,),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Row(
                     children: [
-                    Icon(Icons.account_box),
-                    SizedBox(width: 10,),
-                    Text("Account",style: GoogleFonts.poppins(fontSize: 18,fontWeight: FontWeight.w700),)
-                    
+                      Icon(Icons.account_box),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Account",
+                        style: GoogleFonts.poppins(
+                            fontSize: 18, fontWeight: FontWeight.w700),
+                      )
                     ],
                   )
                 ],

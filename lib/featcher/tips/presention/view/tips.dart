@@ -6,17 +6,16 @@ class Tips1 extends StatelessWidget {
   const Tips1({super.key});
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-     
-     
+    return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.center,
-            colors: [Colors.blue, Colors.white],
-          ),),
-        child: const BodyTips1()),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.center,
+              colors: [Colors.blue, Colors.white],
+            ),
+          ),
+          child: const BodyTips1()),
     );
   }
 }

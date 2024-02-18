@@ -8,7 +8,7 @@ class OptVildation extends StatelessWidget {
   Widget build(BuildContext context) {
     return OtpTextField(
       fillColor: const Color(0x0fe2e8f0),
-      textStyle:const TextStyle(color: maincolore) ,
+      textStyle: const TextStyle(color: maincolore),
       filled: true,
       fieldWidth: 58,
       margin: const EdgeInsets.only(right: 20.0),

@@ -7,17 +7,21 @@ class headerquestion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal:15.0),
+      padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: Container(
-        height: MediaQuery.of(context).size.height*.13,
-        width:MediaQuery.of(context).size.width ,
+        height: MediaQuery.of(context).size.height * .13,
+        width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          border: Border.all(color: maincolore),
-          borderRadius: BorderRadius.circular(10)
-        ),
+            border: Border.all(color: maincolore),
+            borderRadius: BorderRadius.circular(10)),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Center(child: Text("Officia illo aut nemo sequi dignissimos fugiat. Nam ut commodi sit. Voluptatem ?",style: GoogleFonts.poppins(fontSize: 15,fontWeight: FontWeight.w800),)),
+          child: Center(
+              child: Text(
+            "Officia illo aut nemo sequi dignissimos fugiat. Nam ut commodi sit. Voluptatem ?",
+            style:
+                GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.w800),
+          )),
         ),
       ),
     );

@@ -11,11 +11,11 @@ class completingAsinment extends StatelessWidget {
         width: 320,
         height: 88,
         decoration: BoxDecoration(
-             borderRadius: BorderRadius.circular(18),border: Border.all(color: Color(0xff3B82F6))),
+            borderRadius: BorderRadius.circular(18),
+            border: Border.all(color: Color(0xff3B82F6))),
         child: ListTile(
-          leading: Image.asset("Asset/image/Desk_alt.png"),
+            leading: Image.asset("Asset/image/Desk_alt.png"),
             title: Text(
-
               "Dr : Engy Abd Elmaboud",
               style: GoogleFonts.poppins(
                   color: Colors.black,
@@ -29,8 +29,6 @@ class completingAsinment extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
-            trailing:Image.asset("Asset/image/Ok.png")
-        )
-            );
+            trailing: Image.asset("Asset/image/Ok.png")));
   }
 }

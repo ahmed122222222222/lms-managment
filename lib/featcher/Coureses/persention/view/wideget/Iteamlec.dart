@@ -10,25 +10,30 @@ class ItemLec extends StatelessWidget {
         children: [
           Text(
             "1",
-            style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.bold),
+            style:
+                GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.bold),
           ),
           Expanded(
             child: ListTile(
               leading: Image.asset("Asset/image/pdf.png"),
               title: Text(
                 "Lecture 1(Process&Threads)",
-                style: GoogleFonts.poppins(fontSize: 10, fontWeight: FontWeight.normal),
+                style: GoogleFonts.poppins(
+                    fontSize: 10, fontWeight: FontWeight.normal),
               ),
               subtitle: Text(
                 "Dr Amr Masoud . Nov 24",
-                style: GoogleFonts.poppins(fontSize: 10, fontWeight: FontWeight.w500),
+                style: GoogleFonts.poppins(
+                    fontSize: 10, fontWeight: FontWeight.w500),
               ),
               trailing: SizedBox(
                 width: 100,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Semester 1", style: GoogleFonts.poppins(fontSize: 10, fontWeight: FontWeight.w500)),
+                    Text("Semester 1",
+                        style: GoogleFonts.poppins(
+                            fontSize: 10, fontWeight: FontWeight.w500)),
                     Spacer(),
                     Image.asset(
                       "Asset/image/tdesign_more.png",

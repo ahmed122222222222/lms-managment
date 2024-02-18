@@ -27,18 +27,16 @@ class _BodyTips1State extends State<BodyTips1> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-
-      child: LayoutBuilder(
-        builder:(context,Constraints) {
-          double local=Constraints.maxHeight;
-          double localw=Constraints.maxWidth;
-          return Stack(
+      child: LayoutBuilder(builder: (context, Constraints) {
+        double local = Constraints.maxHeight;
+        double localw = Constraints.maxWidth;
+        return Stack(
           children: [
             CustomPageView(
               pageController: pageController,
             ),
             Positioned(
-                top: local* .72,
+                top: local * .72,
                 right: localw * .39,
                 child: CustomDotsindecater(
                   indexpage: pageController!.hasClients
@@ -50,25 +48,22 @@ class _BodyTips1State extends State<BodyTips1> {
                 top: MediaQuery.of(context).size.height * .01,
                 child: TextButton(
                     onPressed: () {
-             if (pageController!.page! < 1) {
-                    pageController?.nextPage(
-                        duration: Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  } else {
-                   Navigator.push(context, MaterialPageRoute(builder: (builder)=>Login()));
-                  }
-      
+                      if (pageController!.page! < 1) {
+                        pageController?.nextPage(
+                            duration: Duration(milliseconds: 500),
+                            curve: Curves.easeIn);
+                      } else {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (builder) => Login()));
+                      }
                     },
                     child: const Text(
                       "next",
                       style: Styels.font14,
                     ))),
-                    
           ],
-        );        }
-        
-        
-      ),
+        );
+      }),
     );
   }
 }
