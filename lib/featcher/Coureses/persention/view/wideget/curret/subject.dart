@@ -4,10 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lms/featcher/Coureses/persention/view/wideget/curret/EroliListview.dart';
 
 import 'package:lms/featcher/HomeScreen/presention/view/widget/Customappbar.dart';
+import 'package:lms/featcher/Loginscreen/data/model/loginrespone.dart';
 
 class Enroil extends StatelessWidget {
-  const Enroil({super.key});
-
+  const Enroil({super.key, required this.loginrespone});
+  final Loginrespone loginrespone;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -57,7 +58,9 @@ class Enroil extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            const EnroliListview()
+            EnroliListview(
+              loginrespone: loginrespone,
+            )
           ],
         ),
       ),

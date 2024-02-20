@@ -9,7 +9,8 @@ class Loginrepoimp extends Loginrepo {
   Dio dio = Dio();
 
   @override
-  Future<Either<Failure, void>> login(Loginmodel loginModel, String endpoint) async {
+  Future<Either<Failure, dynamic>> login(
+      Loginmodel loginModel, String endpoint) async {
     try {
       final Api api = Api(dio);
       Map data = {"email": loginModel.email, "password": loginModel.password};

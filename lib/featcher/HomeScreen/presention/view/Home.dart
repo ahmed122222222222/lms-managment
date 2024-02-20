@@ -1,29 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:lms/core/utils/image.dart';
+
+import 'package:lms/featcher/Coureses/persention/manager/getcouresecubit/get_courses_cubit.dart';
 import 'package:lms/featcher/Coureses/persention/view/courses.dart';
 import 'package:lms/featcher/HomeScreen/presention/view/widget/homebody.dart';
+import 'package:lms/featcher/Loginscreen/data/model/loginrespone.dart';
 
 import 'package:lms/featcher/accout/presenton/view/account.dart';
 import 'package:lms/featcher/cleander/presention/view/cleander.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
+  const HomeScreen({Key? key, required this.loginrespone}) : super(key: key);
+  final Loginrespone loginrespone;
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    print("object");
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
           begin: Alignment.topRight,
           end: Alignment.center,
@@ -184,7 +195,9 @@ class _HomeScreenState extends State<HomeScreen> {
           index: _currentIndex,
           children: [
             const HomeScreenBody(), // Add your home screen body widget
-            const Courese(), // Add your courses page widget
+            Courese(
+              loginrespone: widget.loginrespone,
+            ), // Add your courses page widget
             // Add your profile page widget
             Cleander(),
             Acount(),
@@ -195,6 +208,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _onTabSelected(int index) {
+    BlocProvider.of<GetCoursesCubit>(context)
+        .getcourses(widget.loginrespone, "Students/CurrentCourcesInfo");
     setState(() {
       _currentIndex = index;
     });

@@ -1,5 +1,7 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
+import 'package:lms/featcher/Coureses/data/model/courese_respone_model/courese_respone_model.dart';
+
 import 'package:lms/featcher/Loginscreen/data/model/loginrespone.dart';
 
 class Api {
@@ -15,5 +17,21 @@ class Api {
     } catch (e) {
       throw e;
     }
+  }
+
+  Future<dynamic> getcourses(String? cid,
+      {required String endPoint, required Loginrespone log}) async {
+    var s = log.token!;
+    Map<String, dynamic> headers = {
+      'Authorization': 'Bearer $s',
+      'Content-Type': 'application/json', // Depending on your API requirements
+    };
+
+    var re = await dio.get('$baseurl$endPoint$cid',
+        options: Options(
+          headers: headers,
+        ));
+    print(re.statusCode);
+    return re.data;
   }
 }

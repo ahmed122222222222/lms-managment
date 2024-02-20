@@ -19,13 +19,14 @@ class ServFailure extends Failure {
       case DioErrorType.badCertificate:
         return ServFailure("badCertificate");
       case DioErrorType.badResponse:
-        return ServFailure.fromresp(dio.response!.statusCode!, dio.response!.data);
+        return ServFailure.fromresp(
+            dio.response!.statusCode!, dio.response!.data);
       case DioErrorType.cancel:
         return ServFailure("cancel");
       case DioErrorType.connectionError:
         return ServFailure("connection failure ");
-     default:
-     return ServFailure("connection failure ");
+      default:
+        return ServFailure("connection failure ");
     }
   }
 

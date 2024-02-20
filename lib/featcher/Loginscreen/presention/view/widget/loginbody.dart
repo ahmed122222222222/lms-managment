@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lms/core/utils/image.dart';
+
+import 'package:lms/featcher/Coureses/persention/manager/getcouresecubit/get_courses_cubit.dart';
 import 'package:lms/featcher/HomeScreen/presention/view/Home.dart';
 import 'package:lms/featcher/Loginscreen/data/model/Loginmodel.dart';
 import 'package:lms/featcher/Loginscreen/presention/manager/cubit/login_cubit.dart';
@@ -29,17 +31,29 @@ class _LOgInBodyState extends State<LOgInBody> {
         if (state is LoginFailuer) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Center(child: Text(state.errmas,style: GoogleFonts.poppins(fontSize: 13,fontWeight: FontWeight.bold,color: Colors.white),)),
+              content: Center(
+                  child: Text(
+                state.errmas,
+                style: GoogleFonts.poppins(
+                    fontSize: 13,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              )),
               backgroundColor: Colors.blue,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16)
-              ),
+                  borderRadius: BorderRadius.circular(16)),
             ),
           );
-        }
-        else if (state is LoginSucess)
-        {
-          Navigator.push(context, MaterialPageRoute(builder: (builder)=>HomeScreen()));
+        } else if (state is LoginSucess) {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (builder) => HomeScreen(
+                        loginrespone: state.loginrespone,
+                      )));
+
+          BlocProvider.of<GetCoursesCubit>(context)
+              .getcourses(state.loginrespone, "Students/CurrentCourcesInfo");
         }
       },
       builder: (context, state) {
@@ -104,7 +118,8 @@ class _LOgInBodyState extends State<LOgInBody> {
                   CutamMainButtom(
                     onPressed: () {
                       var Loginmo = Loginmodel(
-                          email: "AbdulMajeedSallam@gmail.com", password: "P@ssw0rd");
+                          email: "AbdulMajeedSallam@gmail.com",
+                          password: "P@ssw0rd");
                       if (globalKey.currentState!.validate()) {
                         BlocProvider.of<LoginCubit>(context).login(
                           Loginmo,

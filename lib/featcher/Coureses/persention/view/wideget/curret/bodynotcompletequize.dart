@@ -5,7 +5,8 @@ import 'package:lms/featcher/Coureses/persention/view/wideget/quizquestion.dart'
 import 'package:lms/featcher/Coureses/persention/view/wideget/startbuttom.dart';
 
 class Bodynotcompletquize extends StatelessWidget {
-  const Bodynotcompletquize({super.key});
+  const Bodynotcompletquize({super.key, required this.quzititel, required this.start, required this.end});
+  final String quzititel,start,end;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -13,7 +14,7 @@ class Bodynotcompletquize extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 8.0),
           child: Text(
-            "Parallel Programming Quiz 2",
+            quzititel,
             style: GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w800),
           ),
         ),
@@ -44,7 +45,7 @@ class Bodynotcompletquize extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "10:00",
+                    start,
                     style: GoogleFonts.poppins(
                         fontSize: 16,
                         color: maincolore,
@@ -64,7 +65,7 @@ class Bodynotcompletquize extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "10:00",
+                    end,
                     style: GoogleFonts.poppins(
                         fontSize: 16,
                         color: maincolore,

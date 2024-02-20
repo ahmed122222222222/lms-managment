@@ -17,7 +17,7 @@ class Boddygrad extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Back(),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(

@@ -8,10 +8,13 @@ import 'package:lms/featcher/Coureses/persention/view/garid.dart';
 import 'package:lms/featcher/Coureses/persention/view/lec.dart';
 import 'package:lms/featcher/Coureses/persention/view/quize.dart';
 import 'package:lms/featcher/Coureses/persention/view/wideget/curret/odyactionchoose.dart';
+import 'package:lms/featcher/Loginscreen/data/model/loginrespone.dart';
 
 // ignore: must_be_immutable, camel_case_types
 class ChooseAaction extends StatelessWidget {
-  const ChooseAaction({super.key});
+  const ChooseAaction({super.key, required this.log, required this.cid});
+  final Loginrespone log;
+  final String cid;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +26,9 @@ class ChooseAaction extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: const BodyChoseAction());
+        body: BodyChoseAction(
+          log: log,
+          cid: cid,
+        ));
   }
 }

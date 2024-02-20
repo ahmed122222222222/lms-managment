@@ -5,6 +5,8 @@ import 'package:lms/const.dart';
 import 'curret/bodynotcompletequize.dart';
 
 class notstartcours extends StatelessWidget {
+  const notstartcours({super.key, required this.quzititel, required this.start, required this.end});
+  final String quzititel,start,end;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,7 +15,9 @@ class notstartcours extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * .30,
           decoration: BoxDecoration(border: Border.all(color: maincolore)),
-          child: const Bodynotcompletquize()),
+          child: Bodynotcompletquize(
+            quzititel: quzititel, start: start, end: end,
+          )),
     );
   }
 }
